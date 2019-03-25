@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<!--
+	Based on:
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	
+	Modified for Jekyll by:Jeremiah Haremza
+	
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+	<head>
+		<title>{{ site.title }} | {{ page.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+	
+{% if page.class == 'page' %}
+	{% include header_pages.html %}
+{% elsif page.class == 'post' %}
+	{% include header_posts.html %}
+{% endif %}
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h2 class="major">{{ page.title }}</h2>
+							{{ content }}
+						</div>
+					</section>
+
+			</div>
+
+
+{% include footer.html %}
+
+	</body>
+</html>
