@@ -1,3 +1,7 @@
+---
+url: /index.html
+---
+
 <!DOCTYPE HTML>
 <!--
 	Hyperspace by HTML5 UP
@@ -13,10 +17,10 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/all.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta content="{{ site.url }}{{ page.url }}" property="og:url">
 		<meta content="website" property="og:type">
 		<meta content="{{ site.description }}" property="og:description">
 		<meta content="{{ site.title }}" property="og:title">
-		<meta content="{{ site.url }}{{ page.url }}" property="og:url">
 	</head>
 	<body class="is-preload">
 
