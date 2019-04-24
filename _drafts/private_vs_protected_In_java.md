@@ -10,7 +10,7 @@ updated: 2019-04-24
 
 In this post we look at some of the different modifiers in Java.
 
-### The Lead Up 
+### The Lead Up
 
 Recently, I discovered a course by Princeton University on [Coursera](https://www.coursera.org/) that focuses on algorithms. You can check them out here:
 
@@ -65,7 +65,6 @@ A Java access modifier specifies which classes can access a given class and its 
 ![Access Modifiers vs. Non-Access Modifiers](/images/AccessAndNonAccessModifiers.png)
 
 As seen in the table above the 4 types of access modifiers are:
-
 
 * `private` - Visible to the class only.
 * `default` - Visible to the package. No modifiers are required.
