@@ -1,4 +1,8 @@
+{% if page.class == 'page' %}
+<meta name="twitter:card" content="summary_large_image">
+{% if page.class == 'post' %}
 <meta name="twitter:card" content="summary">
+{% endif %}
 <meta name="twitter:site" content="@Eulers_Good_Eye">
 <meta name="twitter:creator" content="@Eulers_Good_Eye">
 {% if page.title %}
