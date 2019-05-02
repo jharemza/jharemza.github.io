@@ -1,6 +1,6 @@
 {% if page.class == 'page' %}
 <meta name="twitter:card" content="summary_large_image">
-{% if page.class == 'post' %}
+{% elsif page.class == 'post' %}
 <meta name="twitter:card" content="summary">
 {% endif %}
 <meta name="twitter:site" content="@Eulers_Good_Eye">
@@ -15,6 +15,7 @@
 {% endif %}
 {% if page.description %}
   <meta name="twitter:description" content="{{ page.description }}">
+{else}
 {% else %}
   <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
