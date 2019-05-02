@@ -2,6 +2,7 @@
 layout: default
 title: Work History
 class: page
+description: This page lists a number of various projects I have worked on. Some feature the documented results and others focus on the coding to obtain said results.
 ---
 
 ### Highlights
