@@ -11,6 +11,8 @@
 {% endif %}
 {% if page.excerpt %}
   <meta content="{{ page.excerpt }}" property="og:description">
+{% elsif page.description %}
+  <meta content="{{ page.description }}" property="og:description">
 {% else %}
   <meta content="{{ site.description }}" property="og:description">
 {% endif %}
@@ -24,7 +26,7 @@
 {% if page.featured-image %}
   <meta content="{{ site.url }}/{{ page.featured-image }}" property="og:image">
 {% else %}
-  <meta content="{{ site.url }}/assets/images/medium-images/main-site-image.jpg" property="og:image">
+  <meta content="{{ site.url }}/images/twittercardlarge.jpg" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
