@@ -20,8 +20,8 @@
 {% else %}
   <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
-{% if page.image %}
-  <meta name="twitter:image:src" content="{{ site.url }}/path/to/image/{{ page.image }}">
-{% else %}
+{% if page.class == 'post'  %}
+  <meta name="twitter:image:src" content="{{ site.url }}/images/Leonhard_Euler.jpg">
+{% elsif page.class == 'page'  %}
   <meta name="twitter:image:src" content="{{ site.url }}/images/twittercardlarge.jpg">
 {% endif %}
