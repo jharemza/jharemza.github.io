@@ -1,7 +1,7 @@
 ---
 layout: default
 class: page
-title: Blog Index
+title: "Euler's Good Eye: Blog Index"
 description: This page is the complete list of all of the blog posts on Euler's Good Eye in chronological order.
 ---
 
