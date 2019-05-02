@@ -23,8 +23,8 @@
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="{{ site.url }}/about/" property="article:author">
 {% endif %}
-{% if page.featured-image %}
-  <meta content="{{ site.url }}/{{ page.featured-image }}" property="og:image">
+{% if page.class == 'post' %}
+  <meta content="{{ site.url }}/images/Leonhard_Euler.jpg" property="og:image">
 {% else %}
   <meta content="{{ site.url }}/images/twittercardlarge.jpg" property="og:image">
 {% endif %}
