@@ -1,0 +1,84 @@
+I"�<p>In this post we look at some of the different modifiers in Java.</p>
+
+<h3 id="the-lead-up">The Lead Up</h3>
+
+<p>Recently, I discovered a course by Princeton University on <a href="https://www.coursera.org/">Coursera</a> that focuses on algorithms. You can check them out here:</p>
+
+<ul>
+  <li><a href="https://www.coursera.org/learn/algorithms-part1">Algorithms, Part I</a></li>
+  <li><a href="https://www.coursera.org/learn/algorithms-part2">Algorithms, Part II</a></li>
+</ul>
+
+<p>However, when I checked the course requirements I found that it was taught in Java. At the time I found the course(s) about a week ago (at the time of writing) I knew zero Java, and I still know very little. So off I went to <a href="https://www.sololearn.com">SoloLearn</a>.</p>
+
+<p>There’s a section that covers inheritance in OOP, and I had some familiarity with inheritance from working in other OOP languages such as Python and C/C++. However, I started seeing code snippets with various modifiers and no real outlay of definitions. For example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BankAccount {
+  private double balance=0;
+  public void deposit(double x) {
+    if(x &gt; 0) {
+      balance += x;
+    }
+  }
+}
+</code></pre></div></div>
+
+<p>And then later on I see:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
+    protected int legs;
+    public void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog extends Animal {
+    Dog() {
+        legs = 4;
+    }
+}
+
+class MyClass {
+    public static void main(String[ ] args) {
+        Dog d = new Dog();
+        d.eat();
+    }
+}
+</code></pre></div></div>
+
+<p>So then I wanted to know the difference between <code class="highlighter-rouge">private</code> and <code class="highlighter-rouge">protected</code>.</p>
+
+<h3 id="the-answer">The Answer</h3>
+
+<p>It turns out Java has what are referred to as modifiers. “What’s a modifier?” you ask. “Don’t worry baby birds. I’ll feed ya.”</p>
+
+<p>A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. (See <a href="http://tutorials.jenkov.com/java/access-modifiers.html">Jenkov.com Java Tutorial</a>)</p>
+
+<p><strong>Aside:</strong> Java apparently has “access modifiers” (what we’re talking about here) and non-access modifiers (a subject for another time).</p>
+
+<p><img src="/images/AccessAndNonAccessModifiers.png" alt="Access Modifiers vs. Non-Access Modifiers" /></p>
+
+<p>As seen in the table above the 4 types of access modifiers are:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">private</code> - Visible to the class only.</li>
+  <li><code class="highlighter-rouge">default</code> - Visible to the package. No modifiers are required.</li>
+  <li><code class="highlighter-rouge">protected</code> -Visible to the package and all subclasses.</li>
+  <li><code class="highlighter-rouge">public</code> - Visible to the world.</li>
+</ul>
+
+<h3 id="tldr-the-answer-in-one-table">tl;dr: The Answer in One Table</h3>
+
+<p>To summarize:</p>
+
+<p><img src="/images/access-modifier.png" alt="Summary Table" /></p>
+
+<h4 id="extra-references-on-java-modifiers">Extra References on Java Modifiers</h4>
+
+<p>The below references include extended descriptions of Java modifiers as well as code examples.</p>
+
+<ul>
+  <li><a href="https://www.geeksforgeeks.org/access-modifiers-java/">GeeksforGeeks</a></li>
+  <li><a href="https://www.w3schools.com/java/java_modifiers.asp">w3schools</a></li>
+</ul>
+:ET
