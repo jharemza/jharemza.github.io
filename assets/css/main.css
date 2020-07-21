@@ -2602,7 +2602,10 @@ input, select, textarea {
 		}
 
 			.image.fit img {
-				width: 100%;
+				display: block;
+				margin: 0 0 2em 0;
+				max-width: 100%;
+				height:auto;
 			}
 
 		.image.main {

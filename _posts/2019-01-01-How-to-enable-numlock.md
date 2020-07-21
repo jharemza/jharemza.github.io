@@ -34,7 +34,7 @@ The GSettings configuration tool will enable us to do the task via 2 commands, a
 
             su gdm -s /bin/bash
 
-    ![gdm-terminal](/images/Screenshot&#32;from&#32;2019-04-03&#32;11-21-52_cropped.png)
+        ![gdm-terminal](/images/Screenshot&#32;from&#32;2019-04-03&#32;11-21-52_cropped.png)
 
 2. Run the command to enable NumLock automatically on the login screen:
 
@@ -46,6 +46,6 @@ The GSettings configuration tool will enable us to do the task via 2 commands, a
 
         gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
 
-![enable tap-to-click](/images/Screenshot&#32;from&#32;2019-04-03&#32;11-24-20_cropped.png)
+    ![enable tap-to-click](/images/Screenshot&#32;from&#32;2019-04-03&#32;11-24-20_cropped.png)
 
 NumLock and tap-to-click should now be enabled on your next startup.
