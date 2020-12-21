@@ -16,11 +16,10 @@
 title: Jeremiah Haremza - Data Scientist
 email: jeremiah.haremza@gmail.com
 blog: Euler's Good Eye
-description: Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: This is the personal website of Jeremiah Haremza containing a professional prtfolio, resume,
+    and contact links. There is also a connection to Jeremiah's blog - Euler's Good Eye. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jeremiahharemza.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jeremiahharemza.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Eulers_Good_Eye
 github_username: jharemza
 
