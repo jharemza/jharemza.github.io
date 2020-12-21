@@ -1,4 +1,4 @@
-I"ä<p>In this post we look at some of the different modifiers in Java.</p>
+I"|<p>In this post we look at some of the different modifiers in Java.</p>
 
 <h3 id="the-lead-up">The Lead Up</h3>
 
@@ -13,7 +13,7 @@
 
 <p>Thereâ€™s a section that covers inheritance in OOP, and I had some familiarity with inheritance from working in other OOP languages such as Python and C/C++. However, I started seeing code snippets with various modifiers and no real outlay of definitions. For example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BankAccount {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class BankAccount {
   private double balance=0;
   public void deposit(double x) {
     if(x &gt; 0) {
@@ -25,7 +25,7 @@
 
 <p>And then later on I see:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Animal {
     protected int legs;
     public void eat() {
         System.out.println("Animal eats");
@@ -46,7 +46,7 @@ class MyClass {
 }
 </code></pre></div></div>
 
-<p>So then I wanted to know the difference between <code class="highlighter-rouge">private</code> and <code class="highlighter-rouge">protected</code>.</p>
+<p>So then I wanted to know the difference between <code class="language-plaintext highlighter-rouge">private</code> and <code class="language-plaintext highlighter-rouge">protected</code>.</p>
 
 <h3 id="the-answer">The Answer</h3>
 
@@ -61,10 +61,10 @@ class MyClass {
 <p>As seen in the table above the 4 types of access modifiers are:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">private</code> - Visible to the class only.</li>
-  <li><code class="highlighter-rouge">default</code> - Visible to the package. No modifiers are required.</li>
-  <li><code class="highlighter-rouge">protected</code> -Visible to the package and all subclasses.</li>
-  <li><code class="highlighter-rouge">public</code> - Visible to the world.</li>
+  <li><code class="language-plaintext highlighter-rouge">private</code> - Visible to the class only.</li>
+  <li><code class="language-plaintext highlighter-rouge">default</code> - Visible to the package. No modifiers are required.</li>
+  <li><code class="language-plaintext highlighter-rouge">protected</code> -Visible to the package and all subclasses.</li>
+  <li><code class="language-plaintext highlighter-rouge">public</code> - Visible to the world.</li>
 </ul>
 
 <h3 id="tldr-the-answer-in-one-table">tl;dr: The Answer in One Table</h3>
