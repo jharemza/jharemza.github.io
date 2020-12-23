@@ -1,4 +1,6 @@
 @import url(all.css);
+/*Add Monkai theme for highlighting of code snipets.*/
+@import "monokai.css";
 
 /*
 	Hyperspace by HTML5 UP
