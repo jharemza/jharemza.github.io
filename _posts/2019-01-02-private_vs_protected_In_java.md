@@ -5,7 +5,7 @@ class: post
 excerpt: In this post we look at some of the different modifiers in Java.
 author: Jeremiah J. Haremza
 date: 2019-01-02
-updated: 2019-04-24
+updated: 2020-12-28
 ---
 
 In this post we look at some of the different modifiers in Java.
@@ -21,36 +21,38 @@ However, when I checked the course requirements I found that it was taught in Ja
 
 There's a section that covers inheritance in OOP, and I had some familiarity with inheritance from working in other OOP languages such as Python and C/C++. However, I started seeing code snippets with various modifiers and no real outlay of definitions. For example:
 
-    class BankAccount {
-      private double balance=0;
-      public void deposit(double x) {
-        if(x > 0) {
-          balance += x;
-        }
-      }
+{% highlight java %}
+class BankAccount {
+  private double balance=0;
+  public void deposit(double x) {
+    if(x > 0) {
+      balance += x;
     }
+  }
+}
+{% endhighlight %}
 
 And then later on I see:
 
-    class Animal {
-        protected int legs;
-        public void eat() {
-            System.out.println("Animal eats");
-        }
+{% highlight java %}
+class Animal {
+    protected int legs;
+    public void eat() {
+        System.out.println("Animal eats");
     }
-
-    class Dog extends Animal {
-        Dog() {
-            legs = 4;
-        }
+}
+class Dog extends Animal {
+    Dog() {
+        legs = 4;
     }
-
-    class MyClass {
-        public static void main(String[ ] args) {
-            Dog d = new Dog();
-            d.eat();
-        }
+}
+class MyClass {
+    public static void main(String[ ] args) {
+        Dog d = new Dog();
+        d.eat();
     }
+}
+{% endhighlight %}
 
 So then I wanted to know the difference between `private` and `protected`.
 
