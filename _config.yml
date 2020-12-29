@@ -40,3 +40,7 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+
+# Collections
+# Collection site settings
+collections_dir: collections
