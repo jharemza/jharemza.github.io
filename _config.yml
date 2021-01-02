@@ -44,3 +44,10 @@ exclude:
 # Collections
 # Collection site settings
 collections_dir: collections
+collections:
+  posts:
+    title: Posts
+    output: true
+  code_days:
+    sort_by: date
+    output: false

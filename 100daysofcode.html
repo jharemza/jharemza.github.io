@@ -1,0 +1,30 @@
+---
+url: /100daysofcode.html
+layout: default
+title: "#100DaysOfCode"
+css_style: "assets/css/timeline.css"
+class: page
+description: "This page has a time line by day of my 100 Days of Code."
+---
+
+<div class="container row">
+    <!-- {% assign code_days = site.code_days | sort: 'date' %} -->
+    {% for day in site.code_days %}
+    <div class="item">
+        <i class="vertical-line"></i>
+        <h3 class="item-date">{{ day.date | date: '%A, %B %e, %Y' }}</h3>
+        <div class="card">
+            <h4 class="card-title">
+               Day {{ day.day_num }} of 100
+            </h4>
+            <p>
+                {{ day.content }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    <!-- <div class="last-item">
+        <i class="vertical-line"></i> -->
+        
+    </div>
+    </div>
