@@ -4,7 +4,6 @@ body {
     }
 img {
     max-width:100%
-
     }
 h1,h2,h3,h4,h5,h6 {
     font-family:'Oswald',sans-serif;
@@ -42,7 +41,7 @@ h1,h2,h3,h4,h5,h6 {
     }
     .item-date {
     margin-top:-60px;
-    margin-left:4rem
+    margin-left:2rem
     }
     .cv-title {
     margin-bottom:0;
@@ -63,6 +62,8 @@ h1,h2,h3,h4,h5,h6 {
         transition: 0.3s;
         width: 100%;
         border-radius: 5px;
+        margin-left: 1rem;
+        padding: 0 10px 10px 10px
     }
     .card:hover {
         box-shadow: 0 8px 16px 0 rgb(185, 170, 212);
@@ -76,6 +77,7 @@ h1,h2,h3,h4,h5,h6 {
         margin-bottom: 20px;
     }
     .card-title{
+        margin: 0 -10px;
         text-align: center;
         background:#795ac3;
         border-radius: 5px 5px 0 0;

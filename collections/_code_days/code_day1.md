@@ -2,15 +2,14 @@
 day_num: '1'
 date: 2021-01-01 00:00:00 -0500
 ---
-
-### Today's Progress:
+### Today's Progress
 
 --------------------
 
 1. Fixed my [Resume](https://jeremiahharemza.com/resume.html) page on this site. Now my current resume from OneDrive appears there.
 2. Built this #100DaysOfCode timeline page using html and CSS.
 
-### Thoughts:
+### Thoughts
 
 -------------------
 
