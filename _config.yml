@@ -51,3 +51,13 @@ collections:
   code_days:
     sort_by: date
     output: false
+  # Collections to be used on the resume page
+  # Programming languaes
+  plangs:
+    output: false
+  skills:
+    output: false
+  shcools:
+    output: false
+  jobs:
+    output: false
