@@ -61,3 +61,10 @@ collections:
     output: false
   jobs:
     output: false
+
+# sass config details
+# sass:
+#   load_paths:
+#     - assets/sass
+#     - vendor/bundle/ruby/2.7.0/gems/bootstrap-5.0.0.beta1/assets/stylesheets
+#   style: compressed
