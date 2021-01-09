@@ -13,10 +13,8 @@ description: "This page has a time line by day of my 100 Days of Code."
     <div class="item">
         <i class="vertical-line"></i>
         <h2 class="item-date">{{ day.date | date: '%A, %B %e, %Y' }}</h2>
+        <h4 class="card-title">Day {{ day.day_num }} of 100</h4>
         <div class="card">
-            <h4 class="card-title">
-               Day {{ day.day_num }} of 100
-            </h4>
             <p>
                 {{ day.content }}
             </p>
@@ -24,3 +22,20 @@ description: "This page has a time line by day of my 100 Days of Code."
     </div>
     {% endfor %}
 </div>
+
+<script>
+    var coll = document.getElementsByClassName("card-title");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var card = this.nextElementSibling;
+        if (card.style.maxHeight){
+          card.style.maxHeight = null;
+        } else {
+          card.style.maxHeight = card.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>

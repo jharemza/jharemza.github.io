@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6 {
     }
     .item-date {
     margin-top:-60px;
-    margin-left:2rem
+    margin-left:1rem
     }
     .cv-title {
     margin-bottom:0;
@@ -63,7 +63,11 @@ h1,h2,h3,h4,h5,h6 {
         width: 100%;
         border-radius: 5px;
         margin-left: 1rem;
-        padding: 0 10px 10px 10px
+        padding: 0 10px 0px 10px;
+        border-radius: 0px 0px 5px 5px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
     }
     .card:hover {
         box-shadow: 0 8px 16px 0 rgb(185, 170, 212);
@@ -77,8 +81,16 @@ h1,h2,h3,h4,h5,h6 {
         margin-bottom: 20px;
     }
     .card-title{
-        margin: 0 -10px;
+        margin-left: 1rem;
+        width: 100%;
         text-align: center;
         background:#795ac3;
-        border-radius: 5px 5px 0 0;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 5px 5px 0px 0px;
     }
+    .active, .card-title:hover {
+        background-color: rgb(237, 153, 251);
+        box-shadow: 0 8px 16px 0 rgb(185, 170, 212);
+      }
