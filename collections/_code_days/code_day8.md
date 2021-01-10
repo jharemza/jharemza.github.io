@@ -7,8 +7,8 @@ date: 2021-01-08 00:00:00 -0500
 
 --------------------
 
-1. more design and layout on the the digital resume.
-2. learned about `git stash` and `git stash pop`.
+1. More design and layout on the the digital resume.
+2. Learned about `git stash` and `git stash pop`.
 3. Added drop down transitions to card headers for items on my 100 days of code page.
 
 ### Thoughts
