@@ -60,6 +60,7 @@ collections:
   shcools:
     output: false
   jobs:
+    sort_by: start_date
     output: false
 
 # sass config details
