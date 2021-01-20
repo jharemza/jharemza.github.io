@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #312450f3;
+    padding: 10px;
+  }
+  .grid-container > div {
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+  .resume-header{
+    grid-area: 1 / 1 / span 1 / span 12;
+  }
+  .resume-baseinfo{
+    grid-area: 1 / 1 / span 1 /span 2;
+    font-size: small;
+    background-color: #ebe6f1;
+    color: #8064A7;
+  }
+  .resume-contact{
+    grid-area: 1 / 3 / span 1 /span 1;
+    text-align: left;
+    background-color: #ab8ef0f3;
+  }
+  .resume-exp{
+    grid-area: 2 / 1 / span 1 / span 3;
+    background-color: #ebe6f1;
+    color: #8064A7;
+  }
+  .citi-header{
+    background: url(/images/citi-blue-bar.jpg);
+    background-size: 50% 100%;
+    text-align: center;
+    color: white;
+  }
+  .logo{
+    padding: 1px;
+    margin: auto;
+    transform: scale(0.75);
+    float: left;
+  }
