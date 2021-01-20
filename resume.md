@@ -18,14 +18,14 @@ description: This page contains the latest copy of my resume. Feel free to downl
         <div class="resume-exp">
           <h2 style="color:#8064A7;text-align:center">Work Experience</h2>
           <hr style="border-bottom:solid 1px;color:#8064A7">
-            <div class="citi-header">
-              <img class="logo" src="/images/citi-logo-no-r.png" alt="Citi Logo">
-              {% for job in site.jobs %}
-              {% capture date %}{{ job.start_date | date: '%F' }}{% endcapture %}
+            {% for job in site.jobs %}
+            {% capture date %}{{ job.start_date | date: '%F' }}{% endcapture %}
               {% if date == "2019-12-01" %}
-              {{ job.company }} | {{ job.start_date }} |
+                <div class="citi-header clearfix">
+                  <img class="logo" src="/images/citi-logo-no-r.png" alt="Citi Logo">
+                  {{ job.company }} | {{ job.start_date }} |
               {% endif %}
-              {% endfor %}
+            {% endfor %}
             </div>
         </div>
       </div>
