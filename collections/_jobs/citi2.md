@@ -1,10 +1,10 @@
 ---
 company: Citi
-start_data: 2013-07-01 00:00:00 -0500
-end_date: 2016-06-01 00:00:00 -0500
+start_date: 2019-12-01
+end_date: Present
 location: "Getzville, NY"
-title: Market Risk Analyst
-logo:
+title: "Strategy Senior Analyst"
+logo: /images/citi-logo-no-r.png
 color:
 link: https://online.citi.com/US/login.do
 ---

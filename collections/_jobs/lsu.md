@@ -1,7 +1,7 @@
 ---
 company: Lousiana State University
-start_data: 2010-05-01 00:00:00 -0500
-end_date: 2012-08-01 00:00:00 -0500
+start_date: 2010-05-01
+end_date: 2012-08-01
 location: "Baton Rouge, LA"
 title: Data Quality Expert
 logo:

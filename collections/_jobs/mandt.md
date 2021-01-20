@@ -1,7 +1,7 @@
 ---
 company: M & T Bank
-start_data: 2016-06-01 00:00:00 -0500
-end_date: 2018-10-01 00:00:00 -0500
+start_date: 2016-06-01
+end_date: 2018-10-01
 location: "Buffalo, NY"
 title: Senior Data Analyst
 logo:
