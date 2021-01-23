@@ -1,9 +1,9 @@
 ---
 company: Citi
-start_date: 2019-12-01
+start_date: 2019-12-23 00:00:00 -0500
 end_date: Present
 location: "Getzville, NY"
-title: "Strategy Senior Analyst"
+title: "Strategy Senior Analyst - Assistant Vice President"
 logo: /images/citi-logo-no-r.png
 color:
 link: https://online.citi.com/US/login.do

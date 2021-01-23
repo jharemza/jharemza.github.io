@@ -6,40 +6,59 @@
     background-color: #312450f3;
     padding: 10px;
   }
-  .grid-container > div {
-    padding: 10px 10px;
-    font-size: 15px;
-  }
-  .resume-header {
-    grid-area: 1 / 1 / span 1 / span 12;
-  }
-  .resume-baseinfo {
-    grid-area: 1 / 1 / span 1 /span 2;
-    background-color: #ebe6f1;
-    color: #8064A7;
-  }
-  .resume-contact {
-    grid-area: 1 / 3 / span 1 /span 1;
-    text-align: left;
-    background-color: #ab8ef0f3;
-  }
-  .resume-exp {
-    grid-area: 2 / 1 / span 1 / span 3;
-    background-color: #ebe6f1;
-    color: #8064A7;
-  }
-  .citi-header {
-    background: url(/images/citi-blue-bar.jpg);
-    background-size: 50% 100%;
-    text-align: center;
-    color: white;
-  }
-  .logo {
-    padding: 2px;
-    transform: scale(0.75);
-    float: left;
-    margin-bottom: 0 !important
-  }
-  .clearfix {
-    overflow:auto;
-  }
+.grid-container > div {
+  padding: 10px 10px;
+  font-size: 15px;
+}
+.resume-header {
+  grid-area: 1 / 1 / span 1 / span 12;
+}
+.resume-baseinfo {
+  grid-area: 1 / 1 / span 1 /span 2;
+  background-color: #ebe6f1;
+  color: #8064A7;
+}
+.resume-contact {
+  grid-area: 1 / 3 / span 1 /span 1;
+  text-align: left;
+  background-color: #ab8ef0f3;
+}
+.resume-exp {
+  grid-area: 2 / 1 / span 1 / span 3;
+  background-color: #ebe6f1;
+  color: #8064A7;
+}
+.citi-header {
+  background: url(/images/citi-blue-bar.jpg);
+  background-size: 50% 100%;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.active, .citi-header:hover {
+  background-color: rgb(237, 153, 251);
+  box-shadow: 0 8px 16px 0 rgb(185, 170, 212);
+}
+.logo {
+  padding: 2px;
+  transform: scale(0.75);
+  float: left;
+  margin-bottom: 0 !important
+}
+.clearfix {
+  overflow:auto;
+}
+.job-card {
+  background:#ebe6f1;
+  box-shadow: 0 4px 8px 0 rgba(12, 0, 17, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+.job-card:hover {
+  background-color: rgb(237, 153, 251);
+  box-shadow: 0 8px 16px 0 rgb(185, 170, 212);
+}

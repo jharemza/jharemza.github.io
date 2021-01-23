@@ -1,7 +1,7 @@
 ---
 company: Citi
-start_date: 2013-07-01
-end_date: 2016-06-01
+start_date: 2013-07-29 00:00:00 -0500
+end_date: 2016-06-24 00:00:00 -0500
 location: "Getzville, NY"
 title: Market Risk Analyst
 logo: /images/citi-logo-no-r.png
