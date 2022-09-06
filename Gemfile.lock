@@ -79,11 +79,8 @@ DEPENDENCIES
   jekyll-seo-tag
   jekyll-sitemap
   tzinfo-data
-<<<<<<< Updated upstream
-=======
   wdm (~> 0.1.0)
   webrick (~> 1.7)
->>>>>>> Stashed changes
 
 BUNDLED WITH
    2.3.20
