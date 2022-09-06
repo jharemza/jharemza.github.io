@@ -36,9 +36,10 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner image fit">
-							<h2 class="major">{{ page.title }}</h2>
+							<h1 class="major">{{ page.title }}</h1>
 							{% if page.class == "page" %}
-							{{ page.description }}
+							{{ page.description }}<br>
+							<br>
 							{% endif %}
 							{% if page.author %}
 							{% include post_author.html %}
