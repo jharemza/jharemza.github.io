@@ -86,9 +86,28 @@ description: "You can reach me via the contact form below, or using any of the s
             <div class="col-12">
                 <ul class="actions">
                     <li><input type="submit" value="Send Message" class="primary" /></li>
-                    <li><input type="reset" value="Reset" id="open" /></li>
+                    <li><input type="reset" value="Reset"/></li>
                 </ul>
             </div>
+            <div class="modal-container" id="modal_container">
+                <div class="modal">
+                    <h1>Modals are &#128526</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel iusto, consectetur reiciendis nemo dignissimos quam, sapiente nisi eos suscipit, distinctio modi! Ratione quae dolore, eum repellat tenetur harum voluptate assumenda.
+                    </p>
+                    <element class="button large" id="close">Close</element>
+                </div>
+                </div>
         </div>
     </form>
 </section>
+
+<!-- Modal JavaScript -->
+<script>
+    const modal_container = document.getElementById('modal_container');
+    const close = document.getElementById('close');
+
+    close.addEventListener('click', ()=> {
+        modal_container.classList.add('hide');
+    });
+</script>
