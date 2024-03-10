@@ -10,3 +10,6 @@ vendor/
 
 # Additional files to ignore
 .vscode
+Gemfile
+Gemfile.lock
+*.gem
