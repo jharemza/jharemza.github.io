@@ -3,8 +3,62 @@ url: /contact.html
 layout: default
 title: "Contact Me"
 class: page
-description: "You can reach me via the contact form below, or using any of the social platforms linked below."
+description: "This page has a Contact form and a set of Icons that link to my socials."
 ---
+
+<!-- Form -->
+<section>
+    <h2>Contact Form</h2>
+    <hr>
+    <form method="post" action="#">
+        <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+            </div>
+            <div class="col-12">
+                <select name="demo-category" id="demo-category">
+                    <option value="">- Category -</option>
+                    <option value="1">Manufacturing</option>
+                    <option value="1">Shipping</option>
+                    <option value="1">Administration</option>
+                    <option value="1">Human Resources</option>
+                </select>
+            </div>
+            <div class="col-4 col-12-small">
+                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                <label for="demo-priority-low">Low</label>
+            </div>
+            <div class="col-4 col-12-small">
+                <input type="radio" id="demo-priority-normal" name="demo-priority">
+                <label for="demo-priority-normal">Normal</label>
+            </div>
+            <div class="col-4 col-12-small">
+                <input type="radio" id="demo-priority-high" name="demo-priority">
+                <label for="demo-priority-high">High</label>
+            </div>
+            <div class="col-6 col-12-small">
+                <input type="checkbox" id="demo-copy" name="demo-copy">
+                <label for="demo-copy">Email me a copy</label>
+            </div>
+            <div class="col-6 col-12-small">
+                <input type="checkbox" id="demo-human" name="demo-human" checked>
+                <label for="demo-human">Not a robot</label>
+            </div>
+            <div class="col-12">
+                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+            </div>
+            <div class="col-12">
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</section>
 
 <!-- Socials -->
 <section>
@@ -13,82 +67,23 @@ description: "You can reach me via the contact form below, or using any of the s
         <hr>
         <p>You can find me across the internet on various social media platforms or send me an email directly.</p>
         <br>
-            <ul class="icons">
-                <li><span><a href="https://twitter.com/Eulers_Good_Eye" class="fac fab fa-twitter" style="color:white;background-color:#55ACEE" target="_blank"></a></span></li>
-                <!--<li><span><a href="#" class="fac fab fa-facebook" style="color:white;background-color:#3B5998" target="_blank"></a></span></li>-->
-                <li><span><a href="https://github.com/jharemza" class="fac fab fa-github" style="color:white;background-color:#211F1F" target="_blank"></a></span></li>
-                <li><span><a href="https://stackoverflow.com/users/11235039/jeremiah-haremza" class="fac fab fa-stack-overflow" style="color:white;background-color:#FF9900" target="_blank"></a></span></li>
-                <li><span><a href="https://www.reddit.com/user/EulersGoodEye" class="fac fab fa-reddit" style="color:white;background-color:#ff5700" target="_blank"></a></span></li>
-                <li><span><a href="https://www.youtube.com/channel/UCWtEGdg1JPPduLHP3K3o1ww" class="fac fab fa-youtube" style="color:white;background-color:#bb0000" target="_blank"></a></span></li>
-                <li><span><a href="https://www.linkedin.com/in/jeremiahharemza/" class="fac fab fa-linkedin" style="color:white;background-color:#007bb5" target="_blank"></a></span></li>
-                <li><span><a href="mailto:jeremiah.haremza@gmail.com" class="fac far fa-envelope" style="color:white;background-color:#B23121" target="_blank"></a></span></li>
-            </ul>
+        <ul class="icons">
+            <li><span><a href="https://twitter.com/Eulers_Good_Eye" class="fac fab fa-x-twitter"
+                        style="color:white;background-color:#000000" target="_blank"></a></span></li>
+            <!--<li><span><a href="#" class="fac fab fa-facebook" style="color:white;background-color:#3B5998" target="_blank"></a></span></li>-->
+            <li><span><a href="https://github.com/jharemza" class="fac fab fa-github"
+                        style="color:white;background-color:#211F1F" target="_blank"></a></span></li>
+            <li><span><a href="https://stackoverflow.com/users/11235039/jeremiah-haremza"
+                        class="fac fab fa-stack-overflow" style="color:white;background-color:#FF9900"
+                        target="_blank"></a></span></li>
+            <li><span><a href="https://www.reddit.com/user/EulersGoodEye" class="fac fab fa-reddit"
+                        style="color:white;background-color:#ff5700" target="_blank"></a></span></li>
+            <li><span><a href="https://www.youtube.com/channel/UCWtEGdg1JPPduLHP3K3o1ww" class="fac fab fa-youtube"
+                        style="color:white;background-color:#bb0000" target="_blank"></a></span></li>
+            <li><span><a href="https://www.linkedin.com/in/jeremiahharemza/" class="fac fab fa-linkedin"
+                        style="color:white;background-color:#007bb5" target="_blank"></a></span></li>
+            <li><span><a href="mailto:jeremiah.haremza@gmail.com" class="fac far fa-envelope"
+                        style="color:white;background-color:#B23121" target="_blank"></a></span></li>
+        </ul>
     </div>
-</section>
-
-<!-- Form -->
-<section>
-    <h2>Contact Form</h2>
-    <hr>
-    <form action="https://formsubmit.co/f5ab154e9c492d16bd40c0ae73cd8c83" method="POST">
-        <div class="row gtr-uniform">
-            <!-- Honeypot -->
-            <input type="text" name="_honey" style="display: none;">
-
-            <!-- Disable Captcha -->
-            <input type="hidden" name="_captcha" value="false">
-
-            <!-- Redirect on Submit -->
-            <input type="hidden" name="_next" value="http://localhost:4000/contact_success.html">
-
-            <div class="col-4 col-12-xsmall">
-                <input type="text" name="first-name" id="first-name" value="" placeholder="First Name" required/>
-            </div>
-            <div class="col-4 col-12-xsmall">
-                <input type="text" name="last-name" id="last-name" value="" placeholder="Last Name" required/>
-            </div>
-            <div class="col-4 col-12-xsmall">
-                <input type="email" name="email" id="sender-email" value="" placeholder="name@email.com" required/>
-            </div>
-            <div class="col-12">
-                <select name="msg-category" id="msg-category">
-                    <option value="">- Category -</option>
-                    <option value="Employment Opportunity">Employment Opportunity</option>
-                    <option value="Website Comment">Website Comment</option>
-                    <option value="General Question">General Question</option>
-                    <option value="Coding Help">Coding Help</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="col-4 col-12-small">
-                <input type="radio" id="priority-low" name="priority-low">
-                <label for="priority-low">Low</label>
-            </div>
-            <div class="col-4 col-12-small">
-                <input type="radio" id="priority-normal" name="priority-normal">
-                <label for="priority-normal">Normal</label>
-            </div>
-            <div class="col-4 col-12-small">
-                <input type="radio" id="priority-high" name="priority-high">
-                <label for="priority-high">High</label>
-            </div>
-            <div class="col-6 col-12-small">
-                <input type="checkbox" id="email-copy" name="email-copy">
-                <label for="email-copy">Email me a copy</label>
-            </div>
-            <div class="col-6 col-12-small">
-                <input type="checkbox" id="am-human" name="am-human">
-                <label for="am-human">Not a robot</label>
-            </div>
-            <div class="col-12">
-                <textarea name="email-message" id="email-message" placeholder="Enter your message" rows="6" required></textarea>
-            </div>
-            <div class="col-12">
-                <ul class="actions">
-                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                    <li><input type="reset" value="Reset" id="open" /></li>
-                </ul>
-            </div>
-        </div>
-    </form>
 </section>
