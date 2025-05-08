@@ -10,48 +10,53 @@
 -->
 
 <html>
-	<head>
-		<title>{{ site.title }} | {{ page.title }}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
-		<link rel="stylesheet" href="{{ page.css_style }}" />
-		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
-		{% include og.html %}
-		{% include tc.html %}
-		{% feed_meta %}
-    	{% seo %}
-	</head>
-	<body class="is-preload">
-	
-{% if page.class == 'page' %}
+
+<head>
+	<title>{{ site.title }} | {{ page.title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="{{ page.css_style | default: '/assets/css/all.css'}}" />
+	<noscript>
+		<link rel="stylesheet" href="/assets/css/noscript.css" />
+	</noscript>
+	{% include og.html %}
+	{% include tc.html %}
+	{% feed_meta %}
+	{% seo %}
+</head>
+
+<body class="is-preload">
+
+	{% if page.class == 'page' %}
 	{% include header_pages.html %}
-{% elsif page.class == 'post' %}
+	{% elsif page.class == 'post' %}
 	{% include header_posts.html %}
-{% endif %}
+	{% endif %}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner image fit">
-							<h1 class="major">{{ page.title }}</h1>
-							{% if page.class == "page" %}
-							{{ page.description }}<br>
-							<br>
-							{% endif %}
-							{% if page.author %}
-							{% include post_author.html %}
-							{% endif %}
-							{{ content }}
-						</div>
-					</section>
-
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner image fit">
+				<h1 class="major">{{ page.title }}</h1>
+				{% if page.class == "page" %}
+				{{ page.description }}<br>
+				<br>
+				{% endif %}
+				{% if page.author %}
+				{% include post_author.html %}
+				{% endif %}
+				{{ content }}
 			</div>
+		</section>
+
+	</div>
 
 
-{% include footer.html %}
+	{% include footer.html %}
 
-	</body>
+</body>
+
 </html>
