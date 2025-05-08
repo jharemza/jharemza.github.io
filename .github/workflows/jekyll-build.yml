@@ -1,0 +1,33 @@
+name: Jekyll Site Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2" # You can adjust this if needed
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build the site
+        run: bundle exec jekyll build
+
+      - name: HTMLProofer (Optional link checker)
+        run: |
+          gem install html-proofer
+          bundle exec jekyll build
+          htmlproofer ./_site --disable-external
