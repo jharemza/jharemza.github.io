@@ -1,0 +1,14 @@
+## Template › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#setting-author-url
+# -------------------------------------
+# {author_id}:
+#   name: {full name}
+#   twitter: {twitter_of_author}
+#   url: {homepage_of_author}
+# -------------------------------------
+
+jharemza:
+  name: "Jeremiah Haremza"
+  bio: "Data scientist, technologist, and writer."
+  avatar: "/assets/img/site_avatar_512x512_px.png"
+  twitter: "https://x.com/Eulers_Good_Eye"
+  url: "https://www.linkedin.com/in/jeremiahharemza/"
