@@ -1,0 +1,9 @@
+===== Image Rename + Markdown Update Log =====
+Timestamp: Mon May 12 04:10:36 EDT 2025
+
+✅ Done renaming images.
+
+🔍 Step 2: Updating Markdown references...
+[update] /home/ubiquetous/jharemza.github.io/_posts/2019-01-02-private-vs-protected-java.md
+[update] /home/ubiquetous/jharemza.github.io/_posts/2019-01-01-enable-numlock-ubuntu-login.md
+✅ Markdown references updated.
