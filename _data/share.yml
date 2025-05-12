@@ -51,4 +51,4 @@ platforms:
 
   - type: Email
     icon: "fas fa-envelope"
-    link: "mailto:?subject=TITLE&body=Check this out: URL"
+    link: "mailto:contact@jeremiahharemza.com?subject=TITLE&body=URL"
