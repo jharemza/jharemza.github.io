@@ -13,6 +13,16 @@
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+
+    {% assign author_id = 'jharemza' %}
+    {% assign author = site.data.authors[author_id] %}
+
+    {% if author.bio %}
+      <div class="site-bio text-muted small mt-2">
+        {{ author.bio }}
+      </div>
+    {% endif %}
+
   </header>
   <!-- .profile-wrapper -->
 
