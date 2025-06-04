@@ -1,0 +1,11 @@
+assume_extension: true
+check_external_hash: true
+
+url_ignore:
+  - https://fonts.googleapis.com
+  - https://fonts.gstatic.com
+  - https://jeremiahharemza.com
+  - https://twitter.com
+  - https://x.com
+  - https://reddit.com
+  - https://linkedin.com
