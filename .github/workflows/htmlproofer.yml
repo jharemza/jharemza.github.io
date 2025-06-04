@@ -24,4 +24,15 @@ jobs:
         run: bundle exec jekyll build
 
       - name: Run HTMLProofer
-        run: bundle exec htmlproofer ./_site
+        run: >
+          bundle exec htmlproofer ./_site
+          --assume-extension
+          --check-external-hash
+          --url-ignore
+          '/fonts\.googleapis\.com/',
+          '/fonts\.gstatic\.com/',
+          '/jeremiahharemza\.com/',
+          '/twitter\.com/',
+          '/x\.com/',
+          '/reddit\.com/',
+          '/linkedin\.com/'
