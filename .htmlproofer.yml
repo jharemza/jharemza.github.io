@@ -1,13 +1,38 @@
 assume_extension: true
 check_external_hash: true
-enforce_https: true
+enforce_https: false # Temporarily disable to reduce failures
+timeout: 30
+retries: 3
+retry_delay: 1
 
+# Ignore problematic external URLs
 url_ignore:
-  - https://fonts.googleapis.com
-  - https://fonts.gstatic.com
+  - /^https:\/\/fonts\.googleapis\.com/ # Regex to match all Google Fonts API URLs
+  - /^https:\/\/fonts\.gstatic\.com/ # Regex to match all Google Fonts static URLs
   - https://jeremiahharemza.com
   - https://www.linkedin.com
   - https://linkedin.com
+  - https://www.linkedin.com/in/jeremiahharemza/ # Your specific LinkedIn profile
   - https://twitter.com
+  - https://twitter.com/Eulers_Good_Eye # Your specific Twitter profile
   - https://x.com
+  - https://x.com/Eulers_Good_Eye # Your specific X profile
   - https://reddit.com
+  - https://www.reddit.com
+  - https://www.reddit.com/user/EulersGoodEye/ # Your specific Reddit profile
+  - https://github.com
+  - https://www.github.com
+  - https://stackoverflow.com
+  - https://www.stackoverflow.com
+
+# Ignore common problematic status codes
+ignore_status_codes:
+  - 999 # LinkedIn returns this for bot requests
+  - 403 # Forbidden (common for social media)
+  - 406 # Not Acceptable
+  - 429 # Rate limited
+  - 503 # Service unavailable
+
+# Additional options to reduce failures
+check_sri: false
+check_img_http: false

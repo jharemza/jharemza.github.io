@@ -13,7 +13,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2.3
-          bundler-cache: true # Speeds up subsequent builds
+          bundler-cache: true
 
       - name: Install dependencies
         run: |
@@ -23,5 +23,16 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
+      - name: List built files (debugging)
+        run: |
+          echo "Built site structure:"
+          find ./_site -type f -name "*.html" | head -10
+          echo "Total HTML files: $(find ./_site -type f -name "*.html" | wc -l)"
+
       - name: Run HTMLProofer
-        run: bundle exec htmlproofer ./_site
+        run: |
+          echo "Running HTMLProofer with config:"
+          cat .htmlproofer.yml
+          echo "Checking for problematic Google Fonts links:"
+          grep -r "fonts\.googleapis\.com\|fonts\.gstatic\.com" ./_site/ | head -5 || echo "No Google Fonts links found"
+          bundle exec htmlproofer ./_site --config-file .htmlproofer.yml
