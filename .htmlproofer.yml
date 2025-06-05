@@ -1,38 +1,39 @@
 assume_extension: true
 check_external_hash: true
-enforce_https: false # Temporarily disable to reduce failures
+enforce_https: false
 timeout: 30
 retries: 3
 retry_delay: 1
 
-# Ignore problematic external URLs
-url_ignore:
-  - https://fonts.googleapis.com # Base domain for preconnect
-  - https://fonts.gstatic.com # Base domain for preconnect
+# In htmlproofer 5.x, use 'ignore_urls' instead of 'url_ignore'
+ignore_urls:
+  - https://fonts.googleapis.com
+  - https://fonts.gstatic.com
   - https://jeremiahharemza.com
   - https://www.linkedin.com
   - https://linkedin.com
-  - https://www.linkedin.com/in/jeremiahharemza/ # Your specific LinkedIn profile
+  - https://www.linkedin.com/in/jeremiahharemza/
   - https://twitter.com
-  - https://twitter.com/Eulers_Good_Eye # Your specific Twitter profile
+  - https://twitter.com/Eulers_Good_Eye
   - https://x.com
-  - https://x.com/Eulers_Good_Eye # Your specific X profile
+  - https://x.com/Eulers_Good_Eye
   - https://reddit.com
   - https://www.reddit.com
-  - https://www.reddit.com/user/EulersGoodEye/ # Your specific Reddit profile
+  - https://www.reddit.com/user/EulersGoodEye/
   - https://github.com
   - https://www.github.com
   - https://stackoverflow.com
   - https://www.stackoverflow.com
 
-# Ignore common problematic status codes
+# In htmlproofer 5.x, use 'ignore_status_codes' (note the underscore)
 ignore_status_codes:
-  - 999 # LinkedIn returns this for bot requests
-  - 403 # Forbidden (common for social media)
-  - 406 # Not Acceptable
-  - 429 # Rate limited
-  - 503 # Service unavailable
+  - 999
+  - 403
+  - 406
+  - 429
+  - 503
+  - 400 # Adding this for Twitter/X
 
-# Additional options to reduce failures
+# Additional options
 check_sri: false
 check_img_http: false
