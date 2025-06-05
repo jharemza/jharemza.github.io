@@ -35,4 +35,4 @@ jobs:
           cat .htmlproofer.yml
           echo "Checking for problematic Google Fonts links:"
           grep -r "fonts\.googleapis\.com\|fonts\.gstatic\.com" ./_site/ | head -5 || echo "No Google Fonts links found"
-          bundle exec htmlproofer ./_site --config-file .htmlproofer.yml
+          bundle exec htmlproofer ./_site

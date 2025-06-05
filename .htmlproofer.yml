@@ -7,8 +7,8 @@ retry_delay: 1
 
 # Ignore problematic external URLs
 url_ignore:
-  - /^https:\/\/fonts\.googleapis\.com/ # Regex to match all Google Fonts API URLs
-  - /^https:\/\/fonts\.gstatic\.com/ # Regex to match all Google Fonts static URLs
+  - https://fonts.googleapis.com # Base domain for preconnect
+  - https://fonts.gstatic.com # Base domain for preconnect
   - https://jeremiahharemza.com
   - https://www.linkedin.com
   - https://linkedin.com
