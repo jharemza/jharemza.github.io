@@ -158,6 +158,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-last-modified-at
+  - jekyll-compose
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -240,21 +241,18 @@ jekyll-archives:
     category: /categories/:name/
 
 jekyll_compose:
-  draft_default_front_matter:
-    layout: post
-    title: ""
-    excerpt: null
-    author: jharemza
-    comments: false
-    toc: true
-    category: ""
-    tags: []
-  post_default_front_matter:
-    layout: post
-    title: ""
-    excerpt: null
-    author: jharemza
-    comments: true
-    toc: true
-    category: ""
-    tags: []
+  default_front_matter:
+    drafts:
+      excerpt: null
+      author: jharemza
+      comments: false
+      toc: true
+      category: ""
+      tags: []
+    posts:
+      excerpt: null
+      author: jharemza
+      comments: true
+      toc: true
+      category: ""
+      tags: []
