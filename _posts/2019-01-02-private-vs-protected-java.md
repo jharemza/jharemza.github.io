@@ -4,7 +4,7 @@ title: "Private vs Protected in Java"
 excerpt: A concise explanation of access modifiers in Java and how `private` and `protected` differ in use and scope.
 author: jharemza
 date: 2019-01-02
-updated: 2019-01-02
+last_modified_at: 2019-01-02
 tags: [java, access-modifiers, oop]
 categories: [blog]
 ---

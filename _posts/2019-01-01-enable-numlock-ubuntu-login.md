@@ -4,7 +4,7 @@ title: "How to enable NumLock on Ubuntu Login Screen"
 excerpt: In this post we discuss how to enable both NumLock and tap-to-click for the login screen of Ubuntu 18.04 LTS.
 author: jharemza
 date: 2019-01-01
-updated: 2019-04-03
+last_modified_at: 2019-04-03
 tags: [Ubuntu, NumLock, tap-to-click, login-screen, Linux tips]
 categories: [Linux, Tutorials]
 ---

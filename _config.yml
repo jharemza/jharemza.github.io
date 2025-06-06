@@ -157,6 +157,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-last-modified-at
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -237,3 +238,23 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+jekyll_compose:
+  draft_default_front_matter:
+    layout: post
+    title: ""
+    excerpt: null
+    author: jharemza
+    comments: false
+    toc: true
+    category: ""
+    tags: []
+  post_default_front_matter:
+    layout: post
+    title: ""
+    excerpt: null
+    author: jharemza
+    comments: true
+    toc: true
+    category: ""
+    tags: []
