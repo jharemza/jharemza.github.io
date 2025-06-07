@@ -6,7 +6,7 @@ author: jharemza
 date: 2019-01-02
 last_modified_at: 2019-01-02
 tags: [java, access-modifiers, oop]
-categories: [blog]
+categories: [Java, Programming Basics]
 ---
 ## Introduction
 
