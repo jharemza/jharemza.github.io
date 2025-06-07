@@ -1,84 +1,62 @@
-<!-- markdownlint-disable-next-line -->
-<div align="center">
+# jharemza.github.io
 
-  <!-- markdownlint-disable-next-line -->
-  # Chirpy Jekyll Theme
+This repository contains the source code for jeremiahharemza.com, a personal website built with Jekyll and deployed using Cloudflare Pages.
 
-  A minimal, responsive, and feature-rich Jekyll theme for technical writing.
+## 🔧 Overview
 
-  [![CI](https://img.shields.io/github/actions/workflow/status/cotes2020/jekyll-theme-chirpy/ci.yml?logo=github)][ci]&nbsp;
-  [![Codacy Badge](https://img.shields.io/codacy/grade/4e556876a3c54d5e8f2d2857c4f43894?logo=codacy)][codacy]&nbsp;
-  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy?color=goldenrod)][license]&nbsp;
-  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?&logo=RubyGems&logoColor=ghostwhite&label=gem&color=orange)][gem]&nbsp;
-  [![Open in Dev Containers](https://img.shields.io/badge/Dev_Containers-Open-deepskyblue?logo=linuxcontainers)][open-container]
+- Framework: Jekyll (customized Chirpy theme)
+- Deployment: Cloudflare Pages (via GitHub repo)
+- Content: Technical portfolio, blog posts, project documentation
 
-  [**Live Demo** →][demo]
+## 🚀 Local Development
 
-  [![Devices Mockup](https://chirpy-img.netlify.app/commons/devices-mockup.png)][demo]
+To preview the site locally:
 
-</div>
+```bash
+# Clone the repository
+git clone https://github.com/jharemza/jharemza.github.io.git
+cd jharemza.github.io
 
-## Features
+# Install dependencies
+bundle install
 
-- Dark Theme
-- Localized UI language
-- Pinned Posts on Home Page
-- Hierarchical Categories
-- Trending Tags
-- Table of Contents
-- Last Modified Date
-- Syntax Highlighting
-- Mathematical Expressions
-- Mermaid Diagrams & Flowcharts
-- Dark Mode Images
-- Embed Media
-- Comment Systems
-- Built-in Search
-- Atom Feeds
-- PWA
-- Web Analytics
-- SEO & Performance Optimization
+# Run local server
+bundle exec jekyll serve
+```
+Then visit `http://localhost:4000` in your browser.
 
-## Documentation
+## 🔄 CI/CD Pipeline
 
-To learn how to use, develop, and upgrade the project, please refer to the [Wiki][wiki].
+The build and deployment workflow:
 
-## Contributing
+1. Edit or create content locally.
+2. Push changes to the main branch on GitHub.
+3. Cloudflare Pages automatically builds and deploys the site from GitHub.
 
-Contributions (_pull requests_, _issues_, and _discussions_) are what make the open-source community such an amazing place
-to learn, inspire, and create. Any contributions you make are greatly appreciated.
-For details, see the "[Contributing Guidelines][contribute-guide]".
+No GitHub Actions are used — deployment is handled directly by Cloudflare Pages.
 
-## Credits
+## 📁 Repository Structure
 
-### Contributors
+- `_posts/`: Published blog posts
+- `_drafts/`: Unpublished drafts (via jekyll-compose)
+- `_layouts/`, `_includes/`: Custom Chirpy theme overrides
+- `assets/`, `tabs/`, `pages/`: Static files and navigation content
 
-Thanks to [all the contributors][contributors] involved in the development of the project!
+## 🛠️ Notable Features
 
-[![all-contributors](https://contrib.rocks/image?repo=cotes2020/jekyll-theme-chirpy&columns=16)][contributors]
-<sub> — Made with [contrib.rocks](https://contrib.rocks)</sub>
+- Markdown-based content authoring
+- Built-in SEO, RSS, and sitemap support
+- jekyll-last-modified-at for post update tracking
+- Custom domain via Cloudflare DNS and HTTPS
 
-### Third-Party Assets
+## 🧪 Development Notes
 
-This project is built on the [Jekyll][jekyllrb] ecosystem and some [great libraries][lib], and is developed using [VS Code][vscode] as well as tools provided by [JetBrains][jetbrains] under a non-commercial open-source software license.
+Internal documentation (managed in Notion) includes:
 
-The avatar and favicon for the project's website are from [ClipartMAX][clipartmax].
+- Change log
+- Content workflow
+- Deployment notes and troubleshooting
 
-## License
+## footnote
 
-This project is published under [MIT License][license].
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[ci]: https://github.com/cotes2020/jekyll-theme-chirpy/actions/workflows/ci.yml?query=event%3Apush+branch%3Amaster
-[codacy]: https://app.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[license]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE
-[open-container]: https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/cotes2020/jekyll-theme-chirpy
-[jekyllrb]: https://jekyllrb.com/
-[clipartmax]: https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/
-[demo]: https://cotes2020.github.io/chirpy-demo/
-[wiki]: https://github.com/cotes2020/jekyll-theme-chirpy/wiki
-[contribute-guide]: https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/docs/CONTRIBUTING.md
-[contributors]: https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors
-[lib]: https://github.com/cotes2020/chirpy-static-assets
-[vscode]: https://code.visualstudio.com/
-[jetbrains]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+If you're looking for the source theme, visit the [Chirpy Theme repo](https://github.com/cotes2020/jekyll-theme-chirpy).
