@@ -1,6 +1,6 @@
 # jharemza.github.io
 
-This repository contains the source code for j[jeremiahharemza.com](https://jeremiahharemza.com), a personal website built with Jekyll and deployed using Cloudflare Pages.
+This repository contains the source code for [jeremiahharemza.com](https://jeremiahharemza.com), a personal website built with Jekyll and deployed using Cloudflare Pages.
 
 ## 🔧 Overview
 
