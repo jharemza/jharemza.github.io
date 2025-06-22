@@ -1,6 +1,6 @@
 # jharemza.github.io
 
-This repository contains the source code for jeremiahharemza.com, a personal website built with Jekyll and deployed using Cloudflare Pages.
+This repository contains the source code for j[jeremiahharemza.com](https://jeremiahharemza.com), a personal website built with Jekyll and deployed using Cloudflare Pages.
 
 ## 🔧 Overview
 
@@ -23,6 +23,7 @@ bundle install
 # Run local server
 bundle exec jekyll serve
 ```
+
 Then visit `http://localhost:4000` in your browser.
 
 ## 🔄 CI/CD Pipeline
@@ -30,7 +31,7 @@ Then visit `http://localhost:4000` in your browser.
 The build and deployment workflow:
 
 1. Edit or create content locally.
-2. Push changes to the main branch on GitHub.
+2. Push changes to the `main` branch on GitHub.
 3. Cloudflare Pages automatically builds and deploys the site from GitHub.
 
 No GitHub Actions are used — deployment is handled directly by Cloudflare Pages.
@@ -57,7 +58,7 @@ Internal documentation (managed in Notion) includes:
 - Content workflow
 - Deployment notes and troubleshooting
 
-## License
+## 📄 License
 
 - 🧱 **Code**: Licensed under the [MIT License](./LICENSE)  
   You are free to reuse or adapt the source code for your own non-commercial or commercial projects.
@@ -66,6 +67,6 @@ Internal documentation (managed in Notion) includes:
   [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).  
   You may share with attribution, but not alter or use commercially.
 
-## footnote
+## 📌 Theme Attribution
 
 If you're looking for the source theme, visit the [Chirpy Theme repo](https://github.com/cotes2020/jekyll-theme-chirpy).
