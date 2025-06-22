@@ -57,6 +57,15 @@ Internal documentation (managed in Notion) includes:
 - Content workflow
 - Deployment notes and troubleshooting
 
+## License
+
+- 🧱 **Code**: Licensed under the [MIT License](./LICENSE)  
+  You are free to reuse or adapt the source code for your own non-commercial or commercial projects.
+
+- 📚 **Content**: Original content (posts, graphics, etc.) is licensed under  
+  [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).  
+  You may share with attribution, but not alter or use commercially.
+
 ## footnote
 
 If you're looking for the source theme, visit the [Chirpy Theme repo](https://github.com/cotes2020/jekyll-theme-chirpy).

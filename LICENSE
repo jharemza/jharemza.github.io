@@ -1,6 +1,7 @@
-The MIT License (MIT)
+MIT License for Site Code
+-------------------------
 
-Copyright (c) 2019 Cotes Chung
+Copyright (c) 2019–2025 Jeremiah Haremza
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +20,22 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+**Scope of Site Code**:  
+This license applies to reusable code and configuration files that define the structure, layout, or styling of the website. This includes but is not limited to:
+
+- Jekyll layout templates (`_layouts/`)
+- Includes (`_includes/`)
+- CSS/JS/Assets under `assets/`
+- Site configuration (`_config.yml`, `Gemfile`, etc.)
+
+Creative Commons License for Site Content
+-----------------------------------------
+
+All original written and visual content (e.g., blog posts, tutorials, graphics) on this site is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+**Scope of Site Content**:  
+This includes Markdown files in `_posts/`, `_pages/`, and any embedded or uploaded images, diagrams, or other media created by the site owner.
+
+You may not reuse or modify site content for commercial purposes.  
+Attribution is required for any non-commercial sharing.
