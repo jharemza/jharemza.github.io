@@ -52,6 +52,19 @@ Pages.
 - jekyll-last-modified-at for post update tracking
 - Custom domain via Cloudflare DNS and HTTPS
 
+## 🖼️ Header Image Generation
+
+Blog posts can include standardized header images generated automatically. Use
+`tools/generate_blog_header.py` to create a `1200x630` PNG with the site's fonts and
+colors:
+
+```bash
+python3 tools/generate_header.py "Post Title" --subtitle "Optional subtitle" -o \
+  assets/img/headers/post-title.png
+```
+
+The script requires the `Pillow` package (see `requirements.txt`).
+
 ## 🧪 Development Notes
 
 Internal documentation (managed in Notion) includes:
