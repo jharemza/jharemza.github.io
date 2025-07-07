@@ -34,7 +34,9 @@ The build and deployment workflow:
 2. Push changes to the `main` branch on GitHub.
 3. Cloudflare Pages automatically builds and deploys the site from GitHub.
 
-No GitHub Actions are used — deployment is handled directly by Cloudflare Pages.
+A GitHub Actions workflow ([`htmlproofer.yml`](.github/workflows/htmlproofer.yml))
+validates the generated HTML, while deployment is handled directly by Cloudflare
+Pages.
 
 ## 📁 Repository Structure
 
