@@ -181,6 +181,9 @@ collections:
   code_days:
     sort_by: date
     output: false
+  projects:
+    sort_by: date
+    output: true
 
 defaults:
   - scope:
@@ -193,6 +196,14 @@ defaults:
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: post
+      toc: true
+      comments: false
+      permalink: /projects/:title/
   - scope:
       path: _drafts
     values:
