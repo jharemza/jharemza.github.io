@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-compose"
   gem "jekyll-last-modified-at"
+  gem "jekyll-archives-v2"
 end
 
 gem "html-proofer", "~> 5.0", group: :test

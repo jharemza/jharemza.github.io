@@ -4,18 +4,24 @@ layout: page
 ---
 
 <div id="tags" class="d-flex flex-wrap mx-xl-2">
-  {% assign tags = '' | split: '' %}
-  {% for t in site.tags %}
-    {% assign tags = tags | push: t[0] %}
+  {% assign all_docs = site.documents | where_exp: 'd',
+    'd.collection == "posts" or d.collection == "projects"' %}
+  {% assign tag_names = '' | split: '' %}
+  {% for doc in all_docs %}
+    {% for tag in doc.tags %}
+      {% unless tag_names contains tag %}
+        {% assign tag_names = tag_names | push: tag %}
+      {% endunless %}
+    {% endfor %}
   {% endfor %}
 
-  {% assign sorted_tags = tags | sort_natural %}
+  {% assign sorted_tags = tag_names | sort_natural %}
 
   {% for t in sorted_tags %}
     <div>
       <a class="tag" href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
         {{ t -}}
-        <span class="text-muted">{{ site.tags[t].size }}</span>
+        <span class="text-muted">{{ all_docs | where_exp:'d','d.tags contains t' | size }}</span>
       </a>
     </div>
   {% endfor %}
