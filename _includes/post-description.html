@@ -1,11 +1,13 @@
 {%- comment -%}
-  Get post description or generate it from the post content.
+  Get post excerpt/description or generate it from the post content.
 {%- endcomment -%}
 
 {%- assign max_length = include.max_length | default: 200 -%}
 
 {%- capture description -%}
-{%- if post.description -%}
+{%- if post.excerpt -%}
+  {{- post.excerpt | markdownify | strip_html -}}
+{%- elsif post.description -%}
   {{- post.description -}}
 {%- else -%}
   {%- include no-linenos.html content=post.content -%}
