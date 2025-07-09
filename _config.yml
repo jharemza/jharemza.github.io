@@ -159,6 +159,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-last-modified-at
   - jekyll-compose
+  - jekyll-archives-v2
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -243,13 +244,22 @@ exclude:
   - "package*.json"
 
 jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /tags/:name/
-    category: /categories/:name/
+  posts:
+    enabled: [categories, tags]
+    layouts:
+      categories: category
+      tags: tag
+    permalinks:
+      tags: /tags/:name/
+      categories: /categories/:name/
+  projects:
+    enabled: [categories, tags]
+    layouts:
+      categories: category
+      tags: tag
+    permalinks:
+      tags: /tags/:name/
+      categories: /categories/:name/
 
 jekyll_compose:
   default_front_matter:
