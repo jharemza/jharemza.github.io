@@ -114,6 +114,32 @@
       margin-bottom: 1.25rem;
     }
   }
+
+  .post-meta {
+    @extend %muted;
+
+    i {
+      &:not(:first-child) {
+        margin-left: 1.5rem;
+
+        @include bp.md {
+          margin-left: 1.75rem;
+        }
+      }
+    }
+
+    em {
+      @extend %normal-font-style;
+
+      color: inherit;
+    }
+
+    > div:first-child {
+      display: block;
+
+      @extend %text-ellipsis;
+    }
+  }
 }
 
 .pagination {
