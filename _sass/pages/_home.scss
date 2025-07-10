@@ -104,6 +104,18 @@
   }
 } /* #post-list */
 
+#project-list {
+  .card-wrapper {
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
 .pagination {
   color: var(--text-color);
   font-family: Lato, sans-serif;
