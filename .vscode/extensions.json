@@ -1,3 +1,45 @@
 {
-  "recommendations": ["ms-vscode-remote.remote-containers"]
+    "recommendations": [
+        // === Python & Data Science ===
+        "ms-python.python", // Core Python support: linting, debugging, environments
+        "ms-python.vscode-pylance", // Pylance language server: fast IntelliSense + type checking
+        "ms-toolsai.jupyter", // Jupyter notebook integration
+        "ms-python.black-formatter", // Python autoformatter (Black)
+        "ms-python.isort", // Sort Python imports
+        "charliermarsh.ruff", // Ruff linter: fast, all-in-one Python linting
+        "ms-python.debugpy", // Python debugger
+        "ms-python.vscode-python-envs", // Manage Python environments
+        // === Jekyll / Ruby ===
+        "rebornix.ruby", // Ruby language support (needed for Jekyll plugins/themes)
+        "aki77.jekyll-snippets", // Snippets for Jekyll posts, layouts, and config files
+        // === Markdown & Docs ===
+        "yzhang.markdown-all-in-one", // Enhances Markdown editing (shortcuts, TOC, preview)
+        "davidanson.vscode-markdownlint", // Markdown linting for consistent formatting
+        "goessner.mdmath", // Math typesetting in Markdown (LaTeX-style)
+        // === Web / Frontend ===
+        "esbenp.prettier-vscode", // Prettier code formatter (JS, HTML, CSS, JSON)
+        "dbaeumer.vscode-eslint", // ESLint: JavaScript/TypeScript linting
+        "ecmel.vscode-html-css", // HTML/CSS IntelliSense
+        "redhat.vscode-yaml", // YAML schema validation
+        "ritwickdey.liveserver", // Launch local dev server for static sites
+        "vue.volar", // Vue.js tooling (keep only if you work with Vue)
+        // === Git & Collaboration ===
+        "eamodio.gitlens", // Advanced Git history, blame, repo insights
+        "donjayamanne.githistory", // Simple Git history viewer
+        "ms-vsliveshare.vsliveshare", // Real-time collaboration (pair programming)
+        "github.vscode-pull-request-github", // Manage PRs/issues from VS Code
+        "github.vscode-github-actions", // GitHub Actions workflows in VS Code
+        "github.copilot", // GitHub Copilot AI coding assistant
+        "github.copilot-chat", // GitHub Copilot Chat (AI pair programmer)
+        // === Containers & Databases ===
+        "docker.docker", // Docker Explorer integration
+        "ms-azuretools.vscode-docker", // Dockerfile & Compose support
+        "ms-azuretools.vscode-containers", // Remote containers (Dev Containers)
+        "bajdzis.vscode-database", // Database client
+        "mtxr.sqltools", // SQL query runner
+        "mechatroner.rainbow-csv", // CSV/TSV highlighting & analysis
+        // === Miscellaneous ===
+        "tamasfe.even-better-toml", // TOML syntax support (e.g., pyproject.toml)
+        "pkief.material-icon-theme" // Better file icons for the explorer
+    ]
 }
