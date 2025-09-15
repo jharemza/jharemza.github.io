@@ -24,10 +24,14 @@ jobs:
         run: bundle install
 
       - name: Build Jekyll site
+        env:
+          SITE_DIR: ${{ github.workspace }}/_site
         run: |
           bundle install
           bundle exec jekyll build
 
       - name: Run html-proofer
         working-directory: ci/htmlproofer
-        run: bundle exec htmlproofer ../../_site
+        env:
+          SITE_DIR: ${{ github.workspace }}/_site
+        run: bundle exec htmlproofer "$SITE_DIR"
