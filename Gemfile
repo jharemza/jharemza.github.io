@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 gemspec
 
+gem 'nokogiri', '>= 1.18.9'
+
 group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-compose"
@@ -11,7 +13,8 @@ group :jekyll_plugins do
   gem "jekyll-archives-v2"
 end
 
-gem "html-proofer", "~> 5.0", group: :test
+# Waiting for html-proofer to support nokogiri >= 1.18.9 (see https://github.com/gjtorikian/html-proofer/issues/708)
+# gem "html-proofer", "~> 5.0", group: :test
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"

@@ -1,44 +1,37 @@
-name: HTMLProofer Check
+name: HTMLProofer
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  htmlproofer:
+  link-check:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-      - name: Setup Ruby
+      - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2.3
-          bundler-cache: true
+          ruby-version: "3.2.3"
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+      - name: Install html-proofer dependencies
+        working-directory: ci/htmlproofer
+        run: bundle install
 
       - name: Build Jekyll site
-        run: bundle exec jekyll build
-
-      - name: List built files (debugging)
+        env:
+          SITE_DIR: ${{ github.workspace }}/_site
         run: |
-          echo "Built site structure:"
-          find ./_site -type f -name "*.html" | head -10
-          echo "Total HTML files: $(find ./_site -type f -name "*.html" | wc -l)"
+          bundle install
+          bundle exec jekyll build
 
-      - name: Run HTMLProofer (Internal Links Only - Temporary)
-        run: |
-          echo "Running HTMLProofer with internal links only (temporary fix):"
-          bundle exec htmlproofer ./_site --disable-external
-
-      - name: Run HTMLProofer (Full Check - Commented Out)
-        if: false # Disabled until we fix external link issues
-        run: |
-          echo "Running HTMLProofer with config:"
-          cat .htmlproofer.yml
-          echo "Checking for problematic Google Fonts links:"
-          grep -r "fonts\.googleapis\.com\|fonts\.gstatic\.com" ./_site/ | head -5 || echo "No Google Fonts links found"
-          bundle exec htmlproofer ./_site
+      - name: Run html-proofer
+        working-directory: ci/htmlproofer
+        env:
+          SITE_DIR: ${{ github.workspace }}/_site
+        run: bundle exec htmlproofer "$SITE_DIR"
