@@ -62,7 +62,7 @@ So then I wanted to know the difference between `private` and `protected`.
 
 It turns out Java has what are referred to as modifiers. "What's a modifier?" you ask. "Don't worry baby birds. I'll feed ya."
 
-A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. (See [Jenkov.com Java Tutorial](https://tutorials.jenkov.com/java/access-modifiers.html))
+A Java access modifier specifies which classes can access a given class and its fields, constructors and methods. Access modifiers can be specified separately for a class, its constructors, fields and methods. Java access modifiers are also sometimes referred to in daily speech as Java access specifiers, but the correct name is Java access modifiers. (See [Jenkov.com Java Tutorial](http://tutorials.jenkov.com/java/access-modifiers.html))
 
 **Aside:** Java apparently has "access modifiers" (what we're talking about here) and non-access modifiers (a subject for another time).
 
