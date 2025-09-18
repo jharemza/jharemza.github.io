@@ -34,4 +34,4 @@ jobs:
         working-directory: ci/htmlproofer
         env:
           SITE_DIR: ${{ github.workspace }}/_site
-        run: bundle exec htmlproofer "$SITE_DIR" --ignore-urls "/fonts.googleapis.com/,/fonts.gstatic.com/,/linkedin.com/,/tutorials.jenkov.com/"
+        run: bundle exec htmlproofer "$SITE_DIR" --ignore-urls "/fonts.googleapis.com/,/fonts.gstatic.com/,/linkedin.com/,/tutorials.jenkov.com/,/reddit.com/"
