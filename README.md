@@ -59,11 +59,17 @@ Blog posts can include standardized header images generated automatically. Use
 colors:
 
 ```bash
-python3 tools/generate_header.py "Post Title" --subtitle "Optional subtitle" -o \
+python3 tools/generate_blog_header.py "Post Title" --subtitle "Optional subtitle" -o \
   assets/img/headers/post-title.png
 ```
 
 The script requires the `Pillow` package (see `requirements.txt`).
+Install the pinned dependencies and run its smoke test locally with:
+
+```sh
+python3 -m pip install -r requirements.txt
+python3 -m unittest tests/test_generate_blog_header.py -v
+```
 
 ## 🧪 Development Notes
 

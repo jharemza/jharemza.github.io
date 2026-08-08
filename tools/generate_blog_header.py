@@ -28,6 +28,19 @@ TITLE_FONT_SIZE = 80
 SUBTITLE_FONT_SIZE = 48
 
 
+def load_font(path, size):
+    """Load a required bundled font with an actionable error message."""
+    if not path.is_file():
+        raise RuntimeError(f'Required font asset is missing: {path}')
+
+    try:
+        return ImageFont.truetype(str(path), size)
+    except OSError as error:
+        raise RuntimeError(
+            f'Required font asset is incompatible or unreadable: {path}'
+        ) from error
+
+
 def draw_centered_text(draw, text, font, y):
     """
     Wrap and center-align text within the image boundaries.
@@ -89,9 +102,12 @@ if __name__ == '__main__':
     draw = ImageDraw.Draw(img)
 
     # Load fonts
-    title_font = ImageFont.truetype(str(FONT_BOLD), TITLE_FONT_SIZE)
-    global SUBTITLE_FONT
-    SUBTITLE_FONT = ImageFont.truetype(str(FONT_REGULAR), SUBTITLE_FONT_SIZE)
+    try:
+        title_font = load_font(FONT_BOLD, TITLE_FONT_SIZE)
+        global SUBTITLE_FONT
+        SUBTITLE_FONT = load_font(FONT_REGULAR, SUBTITLE_FONT_SIZE)
+    except RuntimeError as error:
+        parser.error(str(error))
 
     # Render text
     y = HEIGHT // 3 - TITLE_FONT_SIZE

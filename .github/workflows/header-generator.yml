@@ -1,0 +1,39 @@
+name: Header Generator
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/generate_blog_header.py"
+      - "tests/test_generate_blog_header.py"
+      - "assets/lib/fonts/Source_Sans_Pro/**"
+      - "requirements.txt"
+      - ".github/workflows/header-generator.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "tools/generate_blog_header.py"
+      - "tests/test_generate_blog_header.py"
+      - "assets/lib/fonts/Source_Sans_Pro/**"
+      - "requirements.txt"
+      - ".github/workflows/header-generator.yml"
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pinned Python dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run header generator smoke tests
+        run: python -m unittest tests/test_generate_blog_header.py -v
