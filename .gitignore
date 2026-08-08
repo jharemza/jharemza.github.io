@@ -23,5 +23,6 @@ package-lock.json
 
 # Python environment
 venv
+__pycache__/
 
 # Misc
