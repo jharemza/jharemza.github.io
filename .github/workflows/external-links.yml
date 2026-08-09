@@ -1,0 +1,73 @@
+name: External Links
+
+on:
+  schedule:
+    - cron: "17 8 * * 1"
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/external-links.yml"
+      - "linkinator.config.json"
+      - "tools/check_external_links.sh"
+
+jobs:
+  link-check:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.3"
+          bundler-cache: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Check external links
+        run: tools/check_external_links.sh _site
+
+  smoke-test:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Create smoke-test site
+        run: |
+          mkdir _site-smoke
+          printf '<a href="assets/missing-file.png">Internal link</a>\n' > _site-smoke/index.html
+
+      - name: Validate URL skip scope
+        run: |
+          node - <<'NODE'
+          const { skip } = require('./linkinator.config.json');
+          const isSkipped = (url) => skip.some((pattern) => new RegExp(pattern).test(url));
+
+          if (!isSkipped('http://127.0.0.1:12345/assets/missing-file.png')) {
+            throw new Error('A locally resolved site URL was not skipped');
+          }
+          if (isSkipped('https://example.com/blog/article')) {
+            throw new Error('A third-party URL was incorrectly skipped');
+          }
+          NODE
+
+      - name: Run Linkinator smoke test
+        run: tools/check_external_links.sh _site-smoke

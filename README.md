@@ -34,9 +34,45 @@ The build and deployment workflow:
 2. Push changes to the `main` branch on GitHub.
 3. Cloudflare Pages automatically builds and deploys the site from GitHub.
 
-A GitHub Actions workflow ([`htmlproofer.yml`](.github/workflows/htmlproofer.yml))
-validates the generated HTML, while deployment is handled directly by Cloudflare
-Pages.
+The blocking GitHub Actions workflow
+([`htmlproofer.yml`](.github/workflows/htmlproofer.yml)) validates generated HTML,
+internal links and anchors, images, and scripts. It deliberately does not make
+requests to third-party sites. The scheduled and manually triggered
+[`external-links.yml`](.github/workflows/external-links.yml) workflow reports
+external-link health separately, so transient outages and bot protection do not
+block unrelated pull requests. Deployment is handled directly by Cloudflare Pages.
+
+### Link validation
+
+Build the site before running either validation path:
+
+```sh
+bundle install
+bundle exec jekyll build
+```
+
+Run the deterministic internal-site checks with HTMLProofer:
+
+```sh
+bundle install --gemfile ci/htmlproofer/Gemfile
+BUNDLE_GEMFILE=ci/htmlproofer/Gemfile bundle exec htmlproofer _site \
+  --disable-external --no-enforce-https
+```
+
+Run the external-link report with the pinned Linkinator version used in CI:
+
+```sh
+tools/check_external_links.sh _site
+```
+
+The helper invokes the pinned Linkinator version and flattens the generated pages
+into temporary entry points. A name such as `posts__example__index.html` in the
+report maps to `_site/posts/example/index.html`. Linkinator's repository-level
+configuration retries transient failures and treats HTTP 403 and 999
+bot-protection responses as warnings. Its informational output includes the source
+page and checked URL. Add URL exclusions to
+`linkinator.config.json` only when a narrowly identified endpoint cannot be checked
+reliably.
 
 ## 📁 Repository Structure
 

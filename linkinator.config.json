@@ -1,0 +1,17 @@
+{
+  "recurse": false,
+  "verbosity": "info",
+  "timeout": 20000,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 2,
+  "retryErrorsJitter": 2,
+  "skip": [
+    "^http://127\\.0\\.0\\.1:[0-9]+/(?:$|(?:assets|about|archives|blog|categories|contact|norobots|posts|projects|resume|tags)(?:/|$)|feed\\.xml$)",
+    "^https?://(?:www\\.)?jeremiahharemza\\.com(?:/|$)"
+  ],
+  "statusCodes": {
+    "403": "warn",
+    "999": "warn"
+  }
+}
