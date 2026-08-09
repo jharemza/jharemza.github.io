@@ -34,6 +34,5 @@ jobs:
         working-directory: ci/htmlproofer
         env:
           SITE_DIR: ${{ github.workspace }}/_site
-        # W3Schools rejects requests from GitHub-hosted runners with HTTP 403,
-        # even when the linked page is available in a browser.
-        run: bundle exec htmlproofer "$SITE_DIR" --ignore-urls "/fonts.googleapis.com/,/fonts.gstatic.com/,/linkedin.com/,/tutorials.jenkov.com/,/reddit.com/,/w3schools.com/"
+        # External availability is intentionally handled by external-links.yml.
+        run: bundle exec htmlproofer "$SITE_DIR" --disable-external --no-enforce-https

@@ -1,0 +1,28 @@
+{
+  "recurse": false,
+  "verbosity": "info",
+  "timeout": 20000,
+  "retry": true,
+  "retryErrors": true,
+  "retryErrorsCount": 2,
+  "retryErrorsJitter": 2,
+  "skip": [
+    "jeremiahharemza.com/",
+    "assets/",
+    "about/",
+    "archives/",
+    "blog/",
+    "categories/",
+    "contact/",
+    "norobots/",
+    "posts/",
+    "projects/",
+    "resume/",
+    "tags/",
+    "feed.xml"
+  ],
+  "statusCodes": {
+    "403": "warn",
+    "999": "warn"
+  }
+}
